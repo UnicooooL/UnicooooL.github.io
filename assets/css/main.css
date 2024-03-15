@@ -1868,7 +1868,7 @@ input, select, textarea {
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.6rem;
 		font-weight: 600;
-		height: 3rem;
+		/* height: 3rem; */
 		letter-spacing: 0.175em;
 		line-height: 3rem;
 		padding: 0 2rem;
@@ -1876,6 +1876,8 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		overflow: visible; /* ensures nothing is hidden if the button grows */
+    	text-overflow: clip; /* default behavior to not cut the text */
 	}
 
 		input[type="submit"]:hover,
@@ -2963,6 +2965,14 @@ input, select, textarea {
 			.gallery a.portrait img {
 				height: 30vw;
 			}
+		
+		.gallery a.button.primary {
+			width: auto;
+			/*overflow: hidden; /* Ensures overflow text is not visible */
+			/*text-align: center; /* Centers text horizontally */
+			/*vertical-align: middle; /* Helps with vertical centering */
+			text-overflow: ellipsis; /* Adds an ellipsis if text is too long */
+		}
 
 		.gallery .modal {
 			display: -moz-flex;
