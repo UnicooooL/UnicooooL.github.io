@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 
-/*
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -3380,7 +3375,7 @@ input, select, textarea {
 			}
 
 			#wrapper > section:last-of-type > header:after {
-				background: #43d9b8;
+				background: #D9E9CF;
 				border-radius: 0.5rem;
 				bottom: -1.5rem;
 				content: '';
@@ -3897,9 +3892,9 @@ input, select, textarea {
 	/* ===== Topbar (fixed) ===== */
 :root {
   --topbar-height: 56px;
-  --topbar-bg: rgba(255,255,255,0.96); /* 白色略透，柔和 */
+  --topbar-bg: rgba(255,255,255,0.96); 
   --topbar-border: rgba(0,0,0,0.08);
-  --topbar-text: #2B2B2B;               /* 深灰文字更柔和 */
+  --topbar-text: #2B2B2B;              
 }
 
 .site-topbar {
@@ -3908,8 +3903,8 @@ input, select, textarea {
   height: var(--topbar-height);
   background: var(--topbar-bg);
   border-bottom: 1px solid var(--topbar-border);
-  backdrop-filter: saturate(180%) blur(8px); /* 有则更高级，无则忽略 */
-  z-index: 20001; /* 高于 .gallery 的 11000 和 wrapper 背景 */
+  backdrop-filter: saturate(180%) blur(8px); 
+  z-index: 20001; 
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
@@ -3931,7 +3926,7 @@ input, select, textarea {
 }
 
 .site-topbar select {
-  margin-left: auto;                 /* 右对齐 */
+  margin-left: auto;                 
   height: 36px;
   padding: 0 12px;
   border-radius: 12px;
@@ -3940,35 +3935,35 @@ input, select, textarea {
   color: var(--topbar-text);
   font: 600 0.85rem/1 "Raleway", Helvetica, sans-serif;
   letter-spacing: 0.06em;                             
-  box-shadow: 0 4px 12px rgba(0,0,0,0.10);          /* 阴影 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);          
 }
 
 .site-topbar select:hover {
-  border-color: var(--accent);                    /* 绿色边框 */
-  box-shadow: 0 6px 16px #B6CEB4;   /* hover 阴影偏绿 */
+  border-color: var(--accent);                    
+  box-shadow: 0 6px 16px #B6CEB4;   
 }
 .site-topbar select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px #B6CEB4;    /* focus 外圈柔绿光 */
+  box-shadow: 0 0 0 3px #B6CEB4;    
 }
 
 
 
 
-/* 让内容不被固定栏遮住：给页面顶上留出空间 */
+/* avoid content covered */
 body { padding-top: var(--topbar-height); }
 
-/* 锚点滚动时，避免被顶部遮住 */
+/* avoid cover */
 section { scroll-margin-top: calc(var(--topbar-height) + 12px); }
 
-/* 无障碍：隐藏但可读的 label */
+/* label */
 .sr-only {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
 }
 
-/* 小屏优化 */
+/* small screen optimization */
 @media (max-width: 480px) {
   :root { --topbar-height: 52px; }
   .site-topbar .brand { font-size: 0.9rem; }
@@ -3978,7 +3973,31 @@ section { scroll-margin-top: calc(var(--topbar-height) + 12px); }
 
 
 .menu-highlight {
-  color: #96A78D;           /* 绿色 */
-  font-weight: 700;         /* 让它稍微粗一点（可选） */
+  color: #96A78D;          
+  font-weight: 700;         
   transition: color 0.2s ease;
 }
+
+
+/* -------- Form Styling -------- */
+input,
+textarea {
+  border: 1px solid #b4c9b0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Focused (clicked or typing) */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #b4c9b0 !important; 
+  box-shadow: 0 0 0 2px rgba(180, 201, 176, 0.3) !important; 
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
